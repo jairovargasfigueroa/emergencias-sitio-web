@@ -27,8 +27,8 @@ const RADIALES = [-90, -60, -30, 0, 30, 60, 90, 120, 150, 180, 210, 240]
 const ALERTA = polar(148, -58)
 const UNIDAD_DISPONIBLE = polar(206, -94)
 const QUIEBRE_RUTA = polar(148, -94)
-const UNIDAD_EN_ATENCION = polar(110, 148)
-const UNIDAD_LEJANA = polar(206, 104)
+const UNIDAD_EN_ATENCION = polar(110, 200)
+const UNIDAD_LEJANA = polar(206, 118)
 
 // Ruta: baja por la radial hasta el 3er anillo y sigue el anillo hasta la alerta.
 const RUTA = `M${UNIDAD_DISPONIBLE.x} ${UNIDAD_DISPONIBLE.y} L${QUIEBRE_RUTA.x} ${QUIEBRE_RUTA.y} A148 148 0 0 1 ${ALERTA.x} ${ALERTA.y}`
@@ -81,14 +81,18 @@ export function PlanoUstedEstaAqui() {
         ))}
       </g>
 
-      {/* Nombres de los anillos, sobre el eje de abajo a la izquierda. */}
-      <g fontFamily={SENAL} fontSize="13" fontWeight="600" fill="var(--textoSecundario)">
-        {ANILLOS.map(({ radio, nombre }) => {
-          const punto = polar(radio, 196)
+      {/* Nombres de los anillos en placas, como los letreros de calle, sobre la diagonal de abajo a la izquierda.
+          El 1er anillo queda sin nombre: al centro no hay lugar y los de afuera ya ubican la escala. */}
+      <g fontFamily={SENAL} fontSize="16" fontWeight="700">
+        {ANILLOS.filter(({ radio }) => radio > 46).map(({ radio, nombre }) => {
+          const punto = polar(radio, 135)
           return (
-            <text key={nombre} x={punto.x + 6} y={punto.y - 6}>
-              {nombre}
-            </text>
+            <g key={nombre}>
+              <rect x={punto.x - 42} y={punto.y - 13} width="84" height="26" rx="3" fill="var(--placa)" stroke="var(--planoTrazo)" />
+              <text x={punto.x} y={punto.y + 5.5} textAnchor="middle" fill="var(--texto)">
+                {nombre}
+              </text>
+            </g>
           )
         })}
       </g>
@@ -132,7 +136,7 @@ export function PlanoUstedEstaAqui() {
       {/* Placa «Usted está aquí». */}
       <g className="plano-alerta">
         <rect x={ALERTA.x + 22} y={ALERTA.y - 50} width="150" height="40" rx="3" fill="var(--linea)" />
-        <text x={ALERTA.x + 34} y={ALERTA.y - 23} fontFamily={SENAL} fontSize="21" fontWeight="700" fill="#FFFFFF">
+        <text x={ALERTA.x + 34} y={ALERTA.y - 23} fontFamily={SENAL} fontSize="21" fontWeight="700" fill="var(--lineaTexto)">
           Usted está aquí
         </text>
       </g>
@@ -150,15 +154,16 @@ export function PlanoUstedEstaAqui() {
       </g>
 
       {/* Leyenda y aviso de demostración. */}
-      <g fontFamily={DATO} fontSize="13" fontWeight="500" fill="var(--textoSecundario)">
-        <circle cx="24" cy={ALTO - 26} r="6" fill="var(--disponibleFuerte)" />
-        <text x="36" y={ALTO - 21}>Disponible</text>
-        <circle cx="122" cy={ALTO - 26} r="6" fill="var(--enAtencionFuerte)" />
-        <text x="134" y={ALTO - 21}>En atención</text>
-        <circle cx="226" cy={ALTO - 26} r="6" fill="var(--linea)" />
-        <text x="238" y={ALTO - 21}>Pedido de ayuda</text>
-        <text x={ANCHO - 18} y={ALTO - 21} textAnchor="end">
-          Datos de demostración
+      <rect x="0" y={ALTO - 52} width={ANCHO} height="52" fill="var(--placa)" opacity="0.9" />
+      <g fontFamily={DATO} fontSize="16" fontWeight="500" fill="var(--texto)">
+        <circle cx="22" cy={ALTO - 26} r="7" fill="var(--disponibleFuerte)" />
+        <text x="35" y={ALTO - 20}>Disponible</text>
+        <circle cx="134" cy={ALTO - 26} r="7" fill="var(--enAtencionFuerte)" />
+        <text x="147" y={ALTO - 20}>En atención</text>
+        <circle cx="258" cy={ALTO - 26} r="7" fill="var(--linea)" />
+        <text x="271" y={ALTO - 20}>Pedido de ayuda</text>
+        <text x={ANCHO - 14} y={ALTO - 20} textAnchor="end" fill="var(--textoSecundario)">
+          Demostración
         </text>
       </g>
     </svg>

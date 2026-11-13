@@ -1,7 +1,7 @@
 import type { ComponentType } from 'react'
 import { H1, Paragraph, Text, XStack, YStack } from 'tamagui'
 import { AccionPrincipal, AccionSecundaria } from '../../shared/ui/acciones'
-import { Contenedor, Entrada, Texto, TituloTramo, Tramo } from '../../shared/ui/estructura'
+import { Contenedor, Empalme, Entrada, Texto, TituloTramo, Tramo } from '../../shared/ui/estructura'
 import {
   IconoAmbulancia,
   IconoCelular,
@@ -20,6 +20,7 @@ export function PaginaInicio() {
     <>
       <Portada />
       <Contenedor>
+        <Empalme />
         <Tramo id="problema">
           <Problema />
         </Tramo>
@@ -44,27 +45,29 @@ function Portada() {
   return (
     <Contenedor>
       <XStack
-        gap={56}
-        pt={64}
-        pb={88}
-        items="center"
-        $max-lg={{ gap: 40 }}
-        $max-md={{ flexDirection: 'column', items: 'stretch', pt: 40, pb: 64 }}
+        gap={48}
+        pt={56}
+        items="flex-end"
+        $max-lg={{ gap: 32 }}
+        $max-md={{ flexDirection: 'column', items: 'stretch', pt: 32, gap: 40 }}
       >
         <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={28} minW={0}>
-          <H1
-            fontFamily="$heading"
-            fontWeight="700"
-            fontSize={74}
-            lineHeight={72}
-            letterSpacing={-1.4}
-            color="$texto"
-            $max-lg={{ fontSize: 62, lineHeight: 62 }}
-            $max-sm={{ fontSize: 48, lineHeight: 48, letterSpacing: -0.8 }}
-            style={{ textWrap: 'balance' }}
-          >
-            Cada pedido de auxilio, con su ubicación exacta, en la ambulancia disponible.
-          </H1>
+          {/* El mensaje va montado en una placa esmaltada, como el letrero grande de un área del hospital. */}
+          <YStack bg="$placaOscura" rounded={6} px={40} py={36} $max-sm={{ px: 22, py: 24 }}>
+            <H1
+              fontFamily="$heading"
+              fontWeight="700"
+              fontSize={68}
+              lineHeight={68}
+              letterSpacing={-1.2}
+              color="$placaOscuraTexto"
+              $max-lg={{ fontSize: 56, lineHeight: 57 }}
+              $max-sm={{ fontSize: 42, lineHeight: 43, letterSpacing: -0.6 }}
+              style={{ textWrap: 'balance' }}
+            >
+              Cada pedido de auxilio, con su ubicación exacta, en la ambulancia disponible.
+            </H1>
+          </YStack>
           <Entrada>
             Auxilia es el sistema con el que las empresas privadas de ambulancias de Santa Cruz reciben los
             pedidos de ayuda, coordinan a sus unidades y registran cada servicio.
@@ -122,19 +125,43 @@ function Problema() {
   return (
     <YStack gap={36}>
       <TituloTramo>Hoy, un pedido de auxilio pasa por el teléfono, el WhatsApp y un cuaderno.</TituloTramo>
-      <XStack gap={40} $max-md={{ flexDirection: 'column', gap: 28 }}>
-        {HOY.map(({ Icono, titulo, texto }) => (
-          <YStack key={titulo} flex={1} $max-md={{ flexBasis: 'auto' }} gap={12} borderTopWidth={2} borderColor="$texto" pt={18}>
-            <Icono size={34} color="var(--texto)" />
-            <Text fontFamily="$heading" fontWeight="700" fontSize={26} lineHeight={28} color="$texto">
-              {titulo}
-            </Text>
-            <Paragraph color="$textoSecundario" fontSize={17} lineHeight={26}>
-              {texto}
-            </Paragraph>
-          </YStack>
+      {/* Una sola placa, con una fila por problema, como un cartel de indicaciones. */}
+      <YStack render="ul" m={0} p={0} bg="$placa" borderWidth={1} borderColor="$bordePlaca" rounded={6} style={{ listStyle: 'none' }}>
+        {HOY.map(({ Icono, titulo, texto }, indice) => (
+          <XStack
+            render="li"
+            key={titulo}
+            gap={24}
+            px={28}
+            py={24}
+            items="center"
+            borderTopWidth={indice === 0 ? 0 : 1}
+            borderColor="$bordePlaca"
+            $max-sm={{ px: 18, py: 20, gap: 16, items: 'flex-start' }}
+          >
+            <YStack width={56} height={56} rounded={4} bg="$placaOscura" items="center" justify="center" shrink={0} $max-sm={{ width: 48, height: 48 }}>
+              <Icono size={28} color="var(--placaOscuraTexto)" />
+            </YStack>
+            <XStack flex={1} gap={28} items="center" $max-md={{ flexDirection: 'column', items: 'flex-start', gap: 6 }}>
+              <Text
+                width={320}
+                shrink={0}
+                fontFamily="$heading"
+                fontWeight="700"
+                fontSize={28}
+                lineHeight={30}
+                color="$texto"
+                $max-md={{ width: '100%', fontSize: 25, lineHeight: 27 }}
+              >
+                {titulo}
+              </Text>
+              <Paragraph flex={1} $max-md={{ flexBasis: 'auto' }} fontSize={17} lineHeight={26} color="$textoSecundario">
+                {texto}
+              </Paragraph>
+            </XStack>
+          </XStack>
         ))}
-      </XStack>
+      </YStack>
     </YStack>
   )
 }

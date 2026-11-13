@@ -54,7 +54,7 @@ export function PaginaNoticias() {
               $max-md={{ flexDirection: 'column', gap: 10 }}
             >
               <YStack width={220} shrink={0} gap={8} $max-md={{ width: '100%', flexDirection: 'row', items: 'center', gap: 12 }}>
-                <Text fontFamily="$mono" fontWeight="600" fontSize={17} color="$texto">
+                <Text fontFamily="$mono" fontWeight="600" fontSize={17} color="$texto" className="numeros-fijos">
                   {fecha}
                 </Text>
                 {ejemplo && (

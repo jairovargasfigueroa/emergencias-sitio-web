@@ -136,7 +136,7 @@ export function PlanoUstedEstaAqui() {
       {/* Placa «Usted está aquí». */}
       <g className="plano-alerta">
         <rect x={ALERTA.x + 22} y={ALERTA.y - 50} width="150" height="40" rx="3" fill="var(--linea)" />
-        <text x={ALERTA.x + 34} y={ALERTA.y - 23} fontFamily={SENAL} fontSize="21" fontWeight="700" fill="#FFFFFF">
+        <text x={ALERTA.x + 34} y={ALERTA.y - 23} fontFamily={SENAL} fontSize="21" fontWeight="700" fill="var(--lineaTexto)">
           Usted está aquí
         </text>
       </g>

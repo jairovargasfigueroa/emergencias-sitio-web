@@ -6,6 +6,8 @@ import { coloresClaro, coloresOscuro } from './colores'
  */
 export const coloresSitioClaro = {
   ...coloresClaro,
+  // Un punto más oscuro que el del panel: sobre la pared, el #71717A quedaba en 4,19:1 y no llegaba al 4,5.
+  textoSecundario: '#5E5E66',
   pared: '#EFEFEC',
   placa: '#FFFFFF',
   bordePlaca: '#D9D9D4',
@@ -31,7 +33,8 @@ export const coloresSitioOscuro: typeof coloresSitioClaro = {
   placaOscuraTexto: '#18181B',
   placaOscuraSecundario: '#52525B',
   bordePlacaOscura: '#D4D4D8',
-  linea: '#E5372A',
+  // El mismo rojo que en claro: con el blanco encima llega a 4,83:1 (un rojo más claro quedaba en 4,28).
+  linea: '#D92D20',
   lineaTexto: '#FFFFFF',
   plano: '#17171B',
   planoTrazo: '#34343C',

@@ -47,7 +47,7 @@ Restricciones:
 - No se presentan como existentes: reportes de operación, cobros y tarifas en el panel, una red de varias empresas en la misma plataforma, ni el envío de video. La red de empresas es la **visión** de Auxilia, no la oferta actual.
 - Las apps se nombran de forma genérica: "App del ciudadano", "App del paramédico", "Panel de la central".
 - Montos de la tarifa sin publicar hasta confirmarlos.
-- Pendientes de definir por el usuario: correo de soporte, número de WhatsApp, dirección de oficina, redes sociales, dominio. Se usan datos de ejemplo marcados como tales.
+- Correo de soporte y WhatsApp definidos; se cargan de variables de entorno (`.env.local`, no versionado) porque el repositorio es público. Pendientes: dirección de oficina, redes sociales y dominio.
 - Español de Bolivia, con trato de "tú" o "usted" a definir en los textos; el documento usa la primera persona del plural ("Somos Auxilia…").
 
 ## Brand Commitments
@@ -64,7 +64,7 @@ Restricciones:
 - Textos de la empresa: sección 7.1 del documento `Software Documentacion word (3).docx` (raíz de project-taller).
 - Logo: Figura 61 del mismo documento.
 - Capturas del sistema en el documento: panel (Figura 69), apps (Figuras 70 y 71), alerta, toma de incidente, hitos y despacho (Figuras 91 a 94). No hay capturas nuevas en buena calidad.
-- No existen: testimonios, resultados medidos del piloto con la UEM, notas de prensa, clientes además de la UEM, fotos del equipo. No se inventan.
+- Noticias: hitos reales del proyecto (septiembre a noviembre de 2026). No existen: testimonios, resultados medidos del piloto con la UEM, notas de prensa, clientes además de la UEM, fotos del equipo. No se inventan.
 
 ## Product Principles
 

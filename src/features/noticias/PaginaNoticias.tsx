@@ -10,30 +10,45 @@ type Noticia = {
 }
 
 /**
- * Noticias de la empresa, de la más nueva a la más vieja. Las marcadas como ejemplo se muestran con ese aviso
- * hasta confirmarlas: el sitio no inventa hechos.
+ * Noticias de la empresa, de la más nueva a la más vieja. Son hitos reales del proyecto (fechas del historial de
+ * los repositorios y del despliegue). Una noticia que todavía no ocurrió no se publica; si hace falta mostrar una
+ * de prueba, se marca con `ejemplo: true` y el sitio lo avisa.
  */
 const NOTICIAS: Noticia[] = [
   {
     fecha: 'Noviembre de 2026',
-    titulo: 'Auxilia presenta su sistema para empresas privadas de ambulancias',
+    titulo: 'Auxilia presenta su sitio web',
     resumen:
-      'El sistema reúne la app del ciudadano, la app del paramédico y el panel de la central, conectados a un servidor en la nube.',
-    ejemplo: true,
+      'El sitio reúne quiénes somos, qué hace el sistema y cómo una empresa de ambulancias puede pedir una demostración.',
+    ejemplo: false,
   },
   {
-    fecha: 'Noviembre de 2026',
-    titulo: 'Piloto con la Unidad de Emergencias Médicas',
+    fecha: 'Octubre de 2026',
+    titulo: 'El servidor central supera más de 300 pruebas automáticas',
     resumen:
-      'Nuestro cliente base usará el sistema en su operación diaria para medir los tiempos de respuesta y recoger sus observaciones.',
-    ejemplo: true,
+      'Cada función del servidor central se verifica de forma automática antes de llegar a las empresas: alertas, toma de incidentes, hitos de la atención, traslados y el resumen de la escena.',
+    ejemplo: false,
+  },
+  {
+    fecha: 'Octubre de 2026',
+    titulo: 'El sistema suma el resumen de la escena con inteligencia artificial',
+    resumen:
+      'Con las fotos y los audios que envía quien pide ayuda, la tripulación recibe un resumen de lo que va a encontrar antes de llegar. Es un apoyo, no un diagnóstico.',
+    ejemplo: false,
   },
   {
     fecha: 'Septiembre de 2026',
-    titulo: 'El proyecto nace en la FICCT-UAGRM',
+    titulo: 'La primera versión del sistema funciona en la nube',
     resumen:
-      'El sistema comenzó como proyecto de la Facultad de Ingeniería en Ciencias de la Computación y Telecomunicaciones, a partir de la operación real de la UEM.',
-    ejemplo: true,
+      'El servidor central queda desplegado y conectado con la app del ciudadano, la app del paramédico y el panel de la central.',
+    ejemplo: false,
+  },
+  {
+    fecha: 'Septiembre de 2026',
+    titulo: 'Nace el proyecto en la FICCT-UAGRM',
+    resumen:
+      'El sistema comienza como proyecto de la Facultad de Ingeniería en Ciencias de la Computación y Telecomunicaciones, con la Unidad de Emergencias Médicas como caso de estudio.',
+    ejemplo: false,
   },
 ]
 

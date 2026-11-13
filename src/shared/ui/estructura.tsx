@@ -19,15 +19,14 @@ type PropsTramo = {
 }
 
 /**
- * Un tramo de la línea roja del piso. En pantallas anchas la línea corre a la izquierda de todo el contenido y
- * cada tramo marca su parada a la altura del título; en el celular la línea se vuelve una marca corta sobre el
- * título.
+ * Un tramo de la línea roja del piso. La línea corre a la izquierda de todo el contenido y cada tramo marca su
+ * parada a la altura del título. En el celular sigue ahí, más angosta, pegada al margen.
  */
 export function Tramo({ id, final = false, children }: PropsTramo) {
   return (
     <XStack render="section" id={id} width="100%">
-      <YStack position="relative" width={56} shrink={0} items="center" $max-md={{ display: 'none' }}>
-        <YStack width={6} height={final ? 46 : '100%'} bg="$linea" />
+      <YStack position="relative" width={56} shrink={0} items="center" $max-md={{ width: 18 }}>
+        <YStack width={6} height={final ? 46 : '100%'} bg="$linea" $max-md={{ width: 4, height: final ? 34 : '100%' }} />
         <YStack
           position="absolute"
           t={26}
@@ -37,20 +36,37 @@ export function Tramo({ id, final = false, children }: PropsTramo) {
           borderWidth={6}
           borderColor="$linea"
           rounded={2}
+          $max-md={{ t: 20, width: 16, height: 16, borderWidth: 4 }}
         />
       </YStack>
-      <YStack flex={1} minW={0} pt={16} pb={112} pl={24} $max-md={{ pl: 0, pb: 80 }} $max-sm={{ pb: 64 }}>
+      <YStack flex={1} minW={0} pt={16} pb={112} pl={24} $max-md={{ pl: 16, pb: 80 }} $max-sm={{ pb: 64 }}>
         {children}
       </YStack>
     </XStack>
   )
 }
 
+/**
+ * Empalme entre la portada y el primer tramo: la línea roja nace debajo del plano «Usted está aquí», dobla y llega
+ * a la primera parada, como la cinta del piso que sale de un punto y lleva al resto del recorrido.
+ */
+export function Empalme() {
+  return (
+    <YStack position="relative" height={96} aria-hidden $max-md={{ height: 64 }}>
+      {/* Baja desde el centro del plano. */}
+      <YStack position="absolute" t={0} r="22%" width={6} height={66} bg="$linea" $max-md={{ r: '50%', width: 4, height: 40 }} />
+      {/* Cruza hacia la izquierda, hasta la línea de los tramos. */}
+      <YStack position="absolute" t={60} l={25} r="22%" height={6} bg="$linea" $max-md={{ t: 36, l: 7, r: '50%', height: 4 }} />
+      {/* Baja hasta la primera parada. */}
+      <YStack position="absolute" t={60} b={0} l={25} width={6} bg="$linea" $max-md={{ t: 36, l: 7, width: 4 }} />
+    </YStack>
+  )
+}
+
 /** Título de un tramo: letra de señalética, grande y en una o dos líneas. */
 export function TituloTramo({ children }: { children: ReactNode }) {
   return (
-    <YStack gap={14}>
-      <YStack width={40} height={6} bg="$linea" display="none" $max-md={{ display: 'flex' }} />
+    <YStack>
       <H2
         fontFamily="$heading"
         fontWeight="700"

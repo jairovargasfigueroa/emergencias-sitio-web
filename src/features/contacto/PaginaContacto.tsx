@@ -68,9 +68,9 @@ export function PaginaContacto() {
       <Tramo id="canales" final>
         <YStack gap={32}>
           <TituloTramo>Canales de atención</TituloTramo>
-          <XStack gap={14} items="center" p={18} rounded={6} bg="$primarioTinte">
-            <IconoAlerta size={24} color="var(--primarioTinteTexto)" />
-            <Paragraph flex={1} fontSize={17} lineHeight={25} color="$primarioTinteTexto" fontWeight="600">
+          <XStack gap={14} items="center" p={18} rounded={6} bg="$placaOscura">
+            <IconoAlerta size={24} color="var(--placaOscuraTexto)" />
+            <Paragraph flex={1} fontSize={17} lineHeight={25} color="$placaOscuraTexto" fontWeight="600">
               Ninguno de estos canales recibe pedidos de ambulancia. Ante una emergencia, pida ayuda desde la app
               del ciudadano o llame al {EMPRESA.lineaEmergencias}.
             </Paragraph>

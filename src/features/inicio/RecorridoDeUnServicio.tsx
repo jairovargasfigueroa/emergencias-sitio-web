@@ -85,9 +85,11 @@ function PlacaDePaso({ paso, siguiente, ultimo }: PropsPlaca) {
       <YStack
         flex={1}
         mt={18}
-        mr={16}
+        mr={12}
         gap={10}
-        p={20}
+        px={18}
+        pt={18}
+        pb={22}
         bg="$placa"
         borderWidth={1}
         borderColor="$bordePlaca"
@@ -103,10 +105,10 @@ function PlacaDePaso({ paso, siguiente, ultimo }: PropsPlaca) {
             {paso.quien}
           </Text>
         </XStack>
-        <Text fontFamily="$heading" fontWeight="700" fontSize={28} lineHeight={30} color="$texto">
+        <Text fontFamily="$heading" fontWeight="700" fontSize={24} lineHeight={26} color="$texto">
           {paso.titulo}
         </Text>
-        <Paragraph flex={1} $max-md={{ flexBasis: 'auto' }} fontSize={16} lineHeight={24} color="$textoSecundario">
+        <Paragraph flexGrow={1} fontSize={16} lineHeight={24} color="$textoSecundario">
           {paso.texto}
         </Paragraph>
         <Text fontSize={14} lineHeight={20} color="$texto" fontWeight="600">

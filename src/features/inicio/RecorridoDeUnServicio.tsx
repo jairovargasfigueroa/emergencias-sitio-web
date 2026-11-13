@@ -74,7 +74,7 @@ type PropsPlaca = {
 
 function PlacaDePaso({ paso, siguiente, ultimo }: PropsPlaca) {
   return (
-    <YStack render="li" flex={1} minW={0} $max-md={{ flexDirection: 'row', gap: 18 }}>
+    <YStack render="li" flex={1} minW={0} $max-md={{ flexDirection: 'row', gap: 18, flexBasis: 'auto' }}>
       {/* Tramo de línea con su parada. */}
       <XStack height={28} items="center" $max-md={{ height: 'auto', width: 28, flexDirection: 'column' }}>
         <YStack width={18} height={18} rounded={2} bg="$linea" />
@@ -106,7 +106,7 @@ function PlacaDePaso({ paso, siguiente, ultimo }: PropsPlaca) {
         <Text fontFamily="$heading" fontWeight="700" fontSize={28} lineHeight={30} color="$texto">
           {paso.titulo}
         </Text>
-        <Paragraph flex={1} fontSize={16} lineHeight={24} color="$textoSecundario">
+        <Paragraph flex={1} $max-md={{ flexBasis: 'auto' }} fontSize={16} lineHeight={24} color="$textoSecundario">
           {paso.texto}
         </Paragraph>
         <Text fontSize={14} lineHeight={20} color="$texto" fontWeight="600">

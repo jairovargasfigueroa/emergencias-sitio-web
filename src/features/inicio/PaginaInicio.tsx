@@ -51,7 +51,7 @@ function Portada() {
         $max-lg={{ gap: 40 }}
         $max-md={{ flexDirection: 'column', items: 'stretch', pt: 40, pb: 64 }}
       >
-        <YStack flex={1} gap={28} minW={0}>
+        <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={28} minW={0}>
           <H1
             fontFamily="$heading"
             fontWeight="700"
@@ -124,7 +124,7 @@ function Problema() {
       <TituloTramo>Hoy, un pedido de auxilio pasa por el teléfono, el WhatsApp y un cuaderno.</TituloTramo>
       <XStack gap={40} $max-md={{ flexDirection: 'column', gap: 28 }}>
         {HOY.map(({ Icono, titulo, texto }) => (
-          <YStack key={titulo} flex={1} gap={12} borderTopWidth={2} borderColor="$texto" pt={18}>
+          <YStack key={titulo} flex={1} $max-md={{ flexBasis: 'auto' }} gap={12} borderTopWidth={2} borderColor="$texto" pt={18}>
             <Icono size={34} color="var(--texto)" />
             <Text fontFamily="$heading" fontWeight="700" fontSize={26} lineHeight={28} color="$texto">
               {titulo}
@@ -207,7 +207,7 @@ function Directorio() {
                 </Text>
               </YStack>
             </XStack>
-            <Paragraph flex={1} fontSize={17} lineHeight={26} color="$placaOscuraTexto">
+            <Paragraph flex={1} $max-md={{ flexBasis: 'auto' }} fontSize={17} lineHeight={26} color="$placaOscuraTexto">
               {que}
             </Paragraph>
           </XStack>
@@ -221,10 +221,10 @@ function Directorio() {
 function Origen() {
   return (
     <XStack gap={56} $max-md={{ flexDirection: 'column', gap: 28 }}>
-      <YStack flex={1} minW={0}>
+      <YStack flex={1} $max-md={{ flexBasis: 'auto' }} minW={0}>
         <TituloTramo>Nació en una central de ambulancias de verdad.</TituloTramo>
       </YStack>
-      <YStack flex={1} gap={18} minW={0} pt={8}>
+      <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={18} minW={0} pt={8}>
         <Texto>
           El sistema se construyó a partir de la operación real de la Unidad de Emergencias Médicas (UEM), una
           empresa de ambulancias de Santa Cruz y nuestro cliente base, como proyecto de la Facultad de Ingeniería

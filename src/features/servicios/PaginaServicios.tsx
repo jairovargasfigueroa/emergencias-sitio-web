@@ -120,7 +120,7 @@ type PropsParte = {
 function Parte({ titulo, entrada, funciones, pantalla, ancha = false }: PropsParte) {
   return (
     <XStack gap={56} items="flex-start" $max-md={{ flexDirection: 'column', gap: 36 }}>
-      <YStack flex={1} gap={22} minW={0}>
+      <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={22} minW={0}>
         <TituloTramo>{titulo}</TituloTramo>
         <Entrada>{entrada}</Entrada>
         <YStack render="ul" m={0} p={0} gap={0} style={{ listStyle: 'none' }}>
@@ -143,7 +143,7 @@ function Parte({ titulo, entrada, funciones, pantalla, ancha = false }: PropsPar
 
 function Garantia({ titulo, children }: { titulo: string; children: string }) {
   return (
-    <YStack flex={1} gap={10} p={24} bg="$placa" borderWidth={1} borderColor="$bordePlaca" rounded={6}>
+    <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={10} p={24} bg="$placa" borderWidth={1} borderColor="$bordePlaca" rounded={6}>
       <Text fontFamily="$heading" fontWeight="700" fontSize={26} lineHeight={28} color="$texto">
         {titulo}
       </Text>

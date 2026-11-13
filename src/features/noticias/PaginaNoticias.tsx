@@ -1,4 +1,4 @@
-import { Paragraph, Text, XStack, YStack } from 'tamagui'
+import { H2, Paragraph, Text, XStack, YStack } from 'tamagui'
 import { CabeceraPagina, Contenedor, Tramo } from '../../shared/ui/estructura'
 
 type Noticia = {
@@ -65,9 +65,8 @@ export function PaginaNoticias() {
                   </XStack>
                 )}
               </YStack>
-              <YStack flex={1} gap={10}>
-                <Text
-                  render="h2"
+              <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={10}>
+                <H2
                   fontFamily="$heading"
                   fontWeight="700"
                   fontSize={34}
@@ -76,7 +75,7 @@ export function PaginaNoticias() {
                   $max-sm={{ fontSize: 28, lineHeight: 30 }}
                 >
                   {titulo}
-                </Text>
+                </H2>
                 <Paragraph fontSize={18} lineHeight={28} color="$textoSecundario" maxW={680}>
                   {resumen}
                 </Paragraph>

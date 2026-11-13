@@ -53,10 +53,10 @@ export function PaginaQuienesSomos() {
 
       <Tramo id="historia">
         <XStack gap={56} $max-md={{ flexDirection: 'column', gap: 24 }}>
-          <YStack flex={1} minW={0}>
+          <YStack flex={1} $max-md={{ flexBasis: 'auto' }} minW={0}>
             <TituloTramo>De dónde venimos</TituloTramo>
           </YStack>
-          <YStack flex={1} gap={18} minW={0} pt={8}>
+          <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={18} minW={0} pt={8}>
             <Texto>
               El proyecto nació en la Facultad de Ingeniería en Ciencias de la Computación y Telecomunicaciones de
               la UAGRM, a partir de la operación real de la Unidad de Emergencias Médicas, nuestro cliente base.
@@ -116,7 +116,7 @@ export function PaginaQuienesSomos() {
                 >
                   {nombre}
                 </Text>
-                <Paragraph flex={1} fontSize={18} lineHeight={28} color="$textoSecundario">
+                <Paragraph flex={1} $max-sm={{ flexBasis: 'auto' }} fontSize={18} lineHeight={28} color="$textoSecundario">
                   {texto}
                 </Paragraph>
               </XStack>
@@ -141,7 +141,7 @@ export function PaginaQuienesSomos() {
                 rounded={6}
                 flex={1}
                 minW={300}
-                $max-sm={{ minW: 0 }}
+                $max-sm={{ minW: 0, flexBasis: 'auto' }}
               >
                 <YStack width={72} height={72} rounded={4} bg="$placaOscura" items="center" justify="center" shrink={0}>
                   <Text fontFamily="$heading" fontWeight="700" fontSize={30} color="$placaOscuraTexto" aria-hidden>
@@ -189,7 +189,7 @@ type PropsDeclaracion = {
 function PlacaDeDeclaracion({ titulo, oscura = false, children }: PropsDeclaracion) {
   return (
     <YStack
-      flex={1}
+      flex={1} $max-md={{ flexBasis: 'auto' }}
       gap={16}
       p={32}
       rounded={6}

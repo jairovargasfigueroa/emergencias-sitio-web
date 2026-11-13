@@ -161,7 +161,7 @@ function Campo({ form, nombre, etiqueta, autoComplete, inputMode }: PropsCampo) 
       }) => {
         const error = textoDeError(field.state.meta.errors)
         return (
-          <YStack flex={1} gap={8}>
+          <YStack flex={1} $max-sm={{ flexBasis: 'auto' }} gap={8}>
             <Label htmlFor={id} fontSize={16} fontWeight="600" color="$texto">
               {etiqueta}
             </Label>

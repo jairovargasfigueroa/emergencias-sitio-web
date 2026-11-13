@@ -1,5 +1,5 @@
 import { isValidElement, type ReactNode } from 'react'
-import { Paragraph, Text, XStack, YStack } from 'tamagui'
+import { H3, Paragraph, Text, XStack, YStack } from 'tamagui'
 import { EMPRESA } from '../../contenido/empresa'
 import { CabeceraPagina, Contenedor, TituloTramo, Tramo } from '../../shared/ui/estructura'
 
@@ -97,8 +97,7 @@ export function PaginaPrivacidad() {
 function Bloque({ titulo, children }: { titulo: string; children: ReactNode }) {
   return (
     <XStack gap={40} py={24} borderBottomWidth={1} borderColor="$bordePlaca" $max-md={{ flexDirection: 'column', gap: 10 }}>
-      <Text
-        render="h3"
+      <H3
         width={300}
         shrink={0}
         fontFamily="$heading"
@@ -109,8 +108,8 @@ function Bloque({ titulo, children }: { titulo: string; children: ReactNode }) {
         $max-md={{ width: '100%' }}
       >
         {titulo}
-      </Text>
-      <YStack flex={1} maxW={680}>
+      </H3>
+      <YStack flex={1} $max-md={{ flexBasis: 'auto' }} maxW={680}>
         {/* Una lista va tal cual; el texto corrido va en un párrafo. */}
         {isValidElement(children) && children.type === Lista ? (
           children

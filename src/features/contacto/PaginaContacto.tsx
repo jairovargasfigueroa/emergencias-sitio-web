@@ -59,7 +59,7 @@ export function PaginaContacto() {
               coordinar el día.
             </Paragraph>
           </YStack>
-          <YStack flex={1} minW={0} p={32} bg="$placa" borderWidth={1} borderColor="$bordePlaca" rounded={6} $max-sm={{ p: 20 }}>
+          <YStack flex={1} $max-lg={{ flexBasis: 'auto' }} minW={0} p={32} bg="$placa" borderWidth={1} borderColor="$bordePlaca" rounded={6} $max-sm={{ p: 20 }}>
             <FormularioDemostracion />
           </YStack>
         </XStack>
@@ -104,7 +104,7 @@ export function PaginaContacto() {
                     )}
                   </YStack>
                 </XStack>
-                <YStack flex={1} gap={8}>
+                <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={8}>
                   <Paragraph fontSize={18} lineHeight={27} color="$texto">
                     {para}
                   </Paragraph>

@@ -1,5 +1,5 @@
 import type { ComponentType } from 'react'
-import { Paragraph, Text, XStack, YStack } from 'tamagui'
+import { H2, Paragraph, XStack, YStack } from 'tamagui'
 import { AccionSecundaria } from '../../shared/ui/acciones'
 import { CabeceraPagina, Contenedor, Tramo } from '../../shared/ui/estructura'
 import { IconoCruz, IconoEscena, IconoEscudo, IconoReloj, type PropsIcono } from '../../shared/ui/iconos'
@@ -60,8 +60,7 @@ export function PaginaCompromiso() {
               <YStack width={56} height={56} rounded={4} bg="$placaOscura" items="center" justify="center" shrink={0}>
                 <Icono size={30} color="var(--placaOscuraTexto)" />
               </YStack>
-              <Text
-                render="h2"
+              <H2
                 flex={1}
                 fontFamily="$heading"
                 fontWeight="700"
@@ -71,9 +70,9 @@ export function PaginaCompromiso() {
                 $max-sm={{ fontSize: 32, lineHeight: 34 }}
               >
                 {titulo}
-              </Text>
+              </H2>
             </XStack>
-            <YStack flex={1} gap={14} pt={6}>
+            <YStack flex={1} $max-md={{ flexBasis: 'auto' }} gap={14} pt={6}>
               {parrafos.map((parrafo) => (
                 <Paragraph key={parrafo} fontSize={18} lineHeight={29} color="$texto" maxW={640}>
                   {parrafo}

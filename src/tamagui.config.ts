@@ -1,18 +1,20 @@
 import { createSystemFont, createV5Theme, defaultConfig } from '@tamagui/config/v5'
 import { animations } from '@tamagui/config/v5-css'
 import { createTamagui } from 'tamagui'
-import { coloresClaro, coloresOscuro } from './tema/colores'
+import { coloresSitioClaro, coloresSitioOscuro } from './tema/sitio'
 
-const PLEX_SANS = '"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif'
-const PLEX_MONO = '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
+// Letra de señalética para los títulos y letra de alta legibilidad para el texto, como en un hospital.
+const SENAL = '"Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif'
+const LECTURA = '"Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif'
+const DATO = '"Barlow", system-ui, sans-serif'
 
 const fonts = {
-  body: createSystemFont({ font: { family: PLEX_SANS } }),
+  body: createSystemFont({ font: { family: LECTURA } }),
   heading: createSystemFont({
-    font: { family: PLEX_SANS, weight: { 0: '600' } },
-    sizeLineHeight: (tamano) => Math.round(tamano * 1.12 + 5),
+    font: { family: SENAL, weight: { 0: '700' } },
+    sizeLineHeight: (tamano) => Math.round(tamano * 1.04 + 4),
   }),
-  mono: createSystemFont({ font: { family: PLEX_MONO } }),
+  mono: createSystemFont({ font: { family: DATO, weight: { 0: '500' } } }),
 }
 
 // Escala de 12 pasos que usa la plantilla v5 para $background, $borderColor, $color y los temas de Button e Input.
@@ -29,7 +31,7 @@ const paletaOscura = [
 const themes = createV5Theme({
   lightPalette: paletaClara,
   darkPalette: paletaOscura,
-  getTheme: ({ scheme }) => (scheme === 'dark' ? coloresOscuro : coloresClaro),
+  getTheme: ({ scheme }) => (scheme === 'dark' ? coloresSitioOscuro : coloresSitioClaro),
 })
 
 export const config = createTamagui({

@@ -1,6 +1,6 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
+import { createRootRoute } from '@tanstack/react-router'
+import { Marco } from '../../shared/ui/Marco'
 
-/** Sostiene el árbol de rutas; el marco del sitio (encabezado y pie) se agrega con las páginas. */
 export const rutaRaiz = createRootRoute({
-  component: Outlet,
+  component: Marco,
 })

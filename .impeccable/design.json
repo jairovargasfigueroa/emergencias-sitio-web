@@ -1,0 +1,790 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T05:25:36+00:00",
+  "title": "Design System: Auxilia · Sitio corporativo",
+  "extensions": {
+    "colorMeta": {
+      "linea": {
+        "role": "primary",
+        "displayName": "Rojo de la línea",
+        "canonical": "#D92D20",
+        "oklch": "oklch(57.6% 0.209 29.5)",
+        "tonalRamp": [
+          "#3F0000",
+          "#670000",
+          "#8F0000",
+          "#B80601",
+          "#E14031",
+          "#FF6855",
+          "#FF8E79",
+          "#FFB59D"
+        ]
+      },
+      "lineaTexto": {
+        "role": "primary",
+        "displayName": "Blanco sobre rojo",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "primarioPresionado": {
+        "role": "primary",
+        "displayName": "Rojo presionado",
+        "canonical": "#B42318",
+        "oklch": "oklch(50.0% 0.182 29.5)",
+        "tonalRamp": [
+          "#3B0000",
+          "#620000",
+          "#8A0000",
+          "#B12015",
+          "#DA4A3B",
+          "#FF705E",
+          "#FF9681",
+          "#FFBBA5"
+        ]
+      },
+      "primarioTinteTexto": {
+        "role": "primary",
+        "displayName": "Texto de error",
+        "canonical": "#B42318",
+        "oklch": "oklch(50.0% 0.182 29.5)",
+        "tonalRamp": [
+          "#3B0000",
+          "#620000",
+          "#8A0000",
+          "#B12015",
+          "#DA4A3B",
+          "#FF705E",
+          "#FF9681",
+          "#FFBBA5"
+        ]
+      },
+      "pared": {
+        "role": "neutral",
+        "displayName": "Pared",
+        "canonical": "#EFEFEC",
+        "oklch": "oklch(95.1% 0.004 106.5)",
+        "tonalRamp": [
+          "#0B0B09",
+          "#252523",
+          "#424240",
+          "#61615F",
+          "#828280",
+          "#A5A5A2",
+          "#C9C9C6",
+          "#EFEFEC"
+        ]
+      },
+      "placa": {
+        "role": "neutral",
+        "displayName": "Placa clara",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "bordePlaca": {
+        "role": "neutral",
+        "displayName": "Borde de placa",
+        "canonical": "#D9D9D4",
+        "oklch": "oklch(88.4% 0.007 106.5)",
+        "tonalRamp": [
+          "#0B0B08",
+          "#252522",
+          "#42423E",
+          "#61615D",
+          "#83837E",
+          "#A5A5A1",
+          "#C9C9C4",
+          "#EFEFEA"
+        ]
+      },
+      "bordeFuerte": {
+        "role": "neutral",
+        "displayName": "Borde fuerte",
+        "canonical": "#D4D4D8",
+        "oklch": "oklch(87.1% 0.005 286.3)",
+        "tonalRamp": [
+          "#0B0B0D",
+          "#252528",
+          "#424245",
+          "#616164",
+          "#828285",
+          "#A4A4A8",
+          "#C9C9CD",
+          "#EEEEF2"
+        ]
+      },
+      "placaOscura": {
+        "role": "neutral",
+        "displayName": "Placa oscura",
+        "canonical": "#1A1A1D",
+        "oklch": "oklch(21.9% 0.006 285.9)",
+        "tonalRamp": [
+          "#0B0B0E",
+          "#252528",
+          "#424245",
+          "#616164",
+          "#828286",
+          "#A4A4A9",
+          "#C9C9CD",
+          "#EEEEF2"
+        ]
+      },
+      "placaOscuraTexto": {
+        "role": "neutral",
+        "displayName": "Texto de placa oscura",
+        "canonical": "#F4F4F5",
+        "oklch": "oklch(96.7% 0.001 286.4)",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252526",
+          "#424243",
+          "#616162",
+          "#828283",
+          "#A5A5A6",
+          "#C9C9CA",
+          "#EEEEEF"
+        ]
+      },
+      "placaOscuraSecundario": {
+        "role": "neutral",
+        "displayName": "Secundario de placa oscura",
+        "canonical": "#B4B4BB",
+        "oklch": "oklch(77.2% 0.010 286.2)",
+        "tonalRamp": [
+          "#0B0B0F",
+          "#24242A",
+          "#414147",
+          "#606067",
+          "#828288",
+          "#A4A4AB",
+          "#C8C8CF",
+          "#EEEEF5"
+        ]
+      },
+      "bordePlacaOscura": {
+        "role": "neutral",
+        "displayName": "Borde de placa oscura",
+        "canonical": "#323238",
+        "oklch": "oklch(31.9% 0.011 285.8)",
+        "tonalRamp": [
+          "#0B0B0F",
+          "#24242A",
+          "#414148",
+          "#606067",
+          "#818189",
+          "#A4A4AC",
+          "#C8C8D0",
+          "#EDEEF5"
+        ]
+      },
+      "texto": {
+        "role": "neutral",
+        "displayName": "Texto",
+        "canonical": "#18181B",
+        "oklch": "oklch(21.0% 0.006 285.9)",
+        "tonalRamp": [
+          "#0B0B0E",
+          "#252528",
+          "#424245",
+          "#616164",
+          "#828286",
+          "#A4A4A9",
+          "#C9C9CD",
+          "#EEEEF2"
+        ]
+      },
+      "textoSecundario": {
+        "role": "neutral",
+        "displayName": "Texto secundario",
+        "canonical": "#5E5E66",
+        "oklch": "oklch(55.2% 0.014 285.9)",
+        "tonalRamp": [
+          "#0B0A11",
+          "#24242C",
+          "#414149",
+          "#606069",
+          "#81818A",
+          "#A4A4AE",
+          "#C8C8D2",
+          "#EDEDF8"
+        ]
+      },
+      "plano": {
+        "role": "neutral",
+        "displayName": "Fondo del plano",
+        "canonical": "#E4E4E0",
+        "oklch": "oklch(91.8% 0.005 106.5)",
+        "tonalRamp": [
+          "#0B0B09",
+          "#252522",
+          "#42423F",
+          "#61615E",
+          "#82827F",
+          "#A5A5A1",
+          "#C9C9C5",
+          "#EFEFEB"
+        ]
+      },
+      "planoTrazo": {
+        "role": "neutral",
+        "displayName": "Trazo del plano",
+        "canonical": "#C6C6C0",
+        "oklch": "oklch(82.5% 0.008 106.6)",
+        "tonalRamp": [
+          "#0B0B08",
+          "#252521",
+          "#42423D",
+          "#62625C",
+          "#83837D",
+          "#A5A5A0",
+          "#C9C9C3",
+          "#EFEFE9"
+        ]
+      },
+      "planoCalle": {
+        "role": "neutral",
+        "displayName": "Calle del plano",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "disponibleFuerte": {
+        "role": "secondary",
+        "displayName": "Verde de unidad disponible",
+        "canonical": "#15803D",
+        "oklch": "oklch(52.7% 0.137 150.1)",
+        "tonalRamp": [
+          "#001600",
+          "#003400",
+          "#005411",
+          "#007633",
+          "#379954",
+          "#5EBD76",
+          "#83E299",
+          "#A8FFBD"
+        ]
+      },
+      "enAtencionFuerte": {
+        "role": "secondary",
+        "displayName": "Ámbar de unidad en atención",
+        "canonical": "#B45309",
+        "oklch": "oklch(55.5% 0.146 49.0)",
+        "tonalRamp": [
+          "#310000",
+          "#550000",
+          "#7A1B00",
+          "#9F4000",
+          "#C56323",
+          "#ED864B",
+          "#FFAB70",
+          "#FFD094"
+        ]
+      },
+      "lineaOscuro": {
+        "role": "primary",
+        "displayName": "Rojo de la línea (oscuro)",
+        "canonical": "#D92D20",
+        "oklch": "oklch(60.6% 0.212 29.2)",
+        "tonalRamp": [
+          "#3F0000",
+          "#670000",
+          "#8F0000",
+          "#B80503",
+          "#E14032",
+          "#FF6856",
+          "#FF8E79",
+          "#FFB59E"
+        ]
+      },
+      "primarioTinteTextoOscuro": {
+        "role": "primary",
+        "displayName": "Texto de error (oscuro)",
+        "canonical": "#F97066",
+        "oklch": "oklch(70.9% 0.170 26.5)",
+        "tonalRamp": [
+          "#390000",
+          "#5F0000",
+          "#860000",
+          "#AD2827",
+          "#D54F48",
+          "#FE746A",
+          "#FF998D",
+          "#FFBFB1"
+        ]
+      },
+      "paredOscuro": {
+        "role": "neutral",
+        "displayName": "Pared (oscuro)",
+        "canonical": "#111114",
+        "oklch": "oklch(17.9% 0.006 285.8)",
+        "tonalRamp": [
+          "#0B0B0E",
+          "#252528",
+          "#414245",
+          "#616165",
+          "#828286",
+          "#A4A4A9",
+          "#C8C9CD",
+          "#EEEEF2"
+        ]
+      },
+      "placaOscuro": {
+        "role": "neutral",
+        "displayName": "Placa clara (oscuro)",
+        "canonical": "#1A1A1F",
+        "oklch": "oklch(22.0% 0.010 285.6)",
+        "tonalRamp": [
+          "#0B0B0F",
+          "#24242A",
+          "#414147",
+          "#606067",
+          "#818288",
+          "#A4A4AB",
+          "#C8C8CF",
+          "#EEEEF5"
+        ]
+      },
+      "bordePlacaOscuro": {
+        "role": "neutral",
+        "displayName": "Borde de placa (oscuro)",
+        "canonical": "#2A2A31",
+        "oklch": "oklch(28.8% 0.013 285.6)",
+        "tonalRamp": [
+          "#0B0A10",
+          "#24242B",
+          "#414149",
+          "#606068",
+          "#81818A",
+          "#A4A4AD",
+          "#C8C8D1",
+          "#EDEDF7"
+        ]
+      },
+      "bordeFuerteOscuro": {
+        "role": "neutral",
+        "displayName": "Borde fuerte (oscuro)",
+        "canonical": "#3F3F46",
+        "oklch": "oklch(37.0% 0.012 285.8)",
+        "tonalRamp": [
+          "#0B0A10",
+          "#24242B",
+          "#414148",
+          "#606068",
+          "#818189",
+          "#A4A4AC",
+          "#C8C8D1",
+          "#EDEDF6"
+        ]
+      },
+      "placaOscuraOscuro": {
+        "role": "neutral",
+        "displayName": "Placa oscura invertida (oscuro)",
+        "canonical": "#F4F4F5",
+        "oklch": "oklch(96.7% 0.001 286.4)",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252526",
+          "#424243",
+          "#616162",
+          "#828283",
+          "#A5A5A6",
+          "#C9C9CA",
+          "#EEEEEF"
+        ]
+      },
+      "placaOscuraTextoOscuro": {
+        "role": "neutral",
+        "displayName": "Texto de placa oscura (oscuro)",
+        "canonical": "#18181B",
+        "oklch": "oklch(21.0% 0.006 285.9)",
+        "tonalRamp": [
+          "#0B0B0E",
+          "#252528",
+          "#424245",
+          "#616164",
+          "#828286",
+          "#A4A4A9",
+          "#C9C9CD",
+          "#EEEEF2"
+        ]
+      },
+      "placaOscuraSecundarioOscuro": {
+        "role": "neutral",
+        "displayName": "Secundario de placa oscura (oscuro)",
+        "canonical": "#52525B",
+        "oklch": "oklch(44.2% 0.015 285.8)",
+        "tonalRamp": [
+          "#0A0A11",
+          "#24242C",
+          "#41414A",
+          "#606069",
+          "#81818B",
+          "#A4A4AE",
+          "#C8C8D3",
+          "#EDEDF8"
+        ]
+      },
+      "bordePlacaOscuraOscuro": {
+        "role": "neutral",
+        "displayName": "Borde de placa oscura (oscuro)",
+        "canonical": "#D4D4D8",
+        "oklch": "oklch(87.1% 0.005 286.3)",
+        "tonalRamp": [
+          "#0B0B0D",
+          "#252528",
+          "#424245",
+          "#616164",
+          "#828285",
+          "#A4A4A8",
+          "#C9C9CD",
+          "#EEEEF2"
+        ]
+      },
+      "textoOscuro": {
+        "role": "neutral",
+        "displayName": "Texto (oscuro)",
+        "canonical": "#F4F4F5",
+        "oklch": "oklch(96.7% 0.001 286.4)",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252526",
+          "#424243",
+          "#616162",
+          "#828283",
+          "#A5A5A6",
+          "#C9C9CA",
+          "#EEEEEF"
+        ]
+      },
+      "textoSecundarioOscuro": {
+        "role": "neutral",
+        "displayName": "Texto secundario (oscuro)",
+        "canonical": "#A1A1AA",
+        "oklch": "oklch(71.2% 0.013 286.1)",
+        "tonalRamp": [
+          "#0B0A10",
+          "#24242B",
+          "#414149",
+          "#606068",
+          "#81818A",
+          "#A4A4AD",
+          "#C8C8D1",
+          "#EDEDF7"
+        ]
+      },
+      "planoOscuro": {
+        "role": "neutral",
+        "displayName": "Fondo del plano (oscuro)",
+        "canonical": "#17171B",
+        "oklch": "oklch(20.6% 0.008 285.7)",
+        "tonalRamp": [
+          "#0B0B0E",
+          "#252529",
+          "#414146",
+          "#616166",
+          "#828287",
+          "#A4A4AA",
+          "#C8C8CE",
+          "#EEEEF4"
+        ]
+      },
+      "planoTrazoOscuro": {
+        "role": "neutral",
+        "displayName": "Trazo del plano (oscuro)",
+        "canonical": "#34343C",
+        "oklch": "oklch(32.8% 0.014 285.6)",
+        "tonalRamp": [
+          "#0A0A11",
+          "#24242C",
+          "#414149",
+          "#606069",
+          "#81818B",
+          "#A4A4AE",
+          "#C8C8D2",
+          "#EDEDF8"
+        ]
+      },
+      "planoCalleOscuro": {
+        "role": "neutral",
+        "displayName": "Calle del plano (oscuro)",
+        "canonical": "#222228",
+        "oklch": "oklch(25.5% 0.011 285.6)",
+        "tonalRamp": [
+          "#0B0B10",
+          "#24242A",
+          "#414148",
+          "#606067",
+          "#818189",
+          "#A4A4AC",
+          "#C8C8D0",
+          "#EDEEF6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "titulo-pagina": {
+        "displayName": "Título de página",
+        "purpose": "El nombre de cada página interna, como la placa grande de un área."
+      },
+      "placa-portada": {
+        "displayName": "Placa de portada",
+        "purpose": "El mensaje de la portada, en la placa oscura."
+      },
+      "titulo-tramo": {
+        "displayName": "Título de tramo",
+        "purpose": "El título de cada parada de la línea."
+      },
+      "rotulo-grande": {
+        "displayName": "Rótulo grande",
+        "purpose": "Declaraciones y títulos de noticias."
+      },
+      "rotulo": {
+        "displayName": "Rótulo",
+        "purpose": "Filas de listas y pasos de trabajo."
+      },
+      "rotulo-chico": {
+        "displayName": "Rótulo chico",
+        "purpose": "Tarjetas del directorio, del equipo y de garantías."
+      },
+      "accion": {
+        "displayName": "Acción",
+        "purpose": "Texto de las acciones principal y secundaria."
+      },
+      "navegacion": {
+        "displayName": "Navegación",
+        "purpose": "Secciones del encabezado; 24 px en el menú del celular."
+      },
+      "entrada": {
+        "displayName": "Entrada",
+        "purpose": "Párrafo debajo de un título, hasta 680 px."
+      },
+      "cuerpo": {
+        "displayName": "Cuerpo",
+        "purpose": "Lectura corriente, hasta 680 px."
+      },
+      "cuerpo-placa": {
+        "displayName": "Cuerpo de placa",
+        "purpose": "Descripciones dentro de filas y placas."
+      },
+      "etiqueta-campo": {
+        "displayName": "Etiqueta de campo",
+        "purpose": "Etiquetas del formulario."
+      },
+      "apoyo": {
+        "displayName": "Apoyo",
+        "purpose": "Quién hace cada paso, notas de dato de ejemplo, aviso de emergencia (15/21)."
+      },
+      "dato": {
+        "displayName": "Dato",
+        "purpose": "Horas y fechas con cifras tabulares."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "salida-suave",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "La única curva del sitio: la usa el plano «Usted está aquí»."
+      },
+      {
+        "name": "caer-alerta",
+        "value": "520ms, retraso 300ms",
+        "purpose": "La alerta cae en el plano."
+      },
+      {
+        "name": "onda-alerta",
+        "value": "1400ms, retraso 760ms",
+        "purpose": "Onda que suelta la alerta."
+      },
+      {
+        "name": "trazar-ruta",
+        "value": "1600ms, retraso 1100ms",
+        "purpose": "La unidad disponible traza su ruta."
+      },
+      {
+        "name": "aparecer",
+        "value": "420ms, retraso 2500ms",
+        "purpose": "Aparece el rótulo de la unidad. Con movimiento reducido no corre nada y el plano queda completo."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "max-lg",
+        "value": "< 1024px",
+        "purpose": "La placa de portada baja a 56 px y se acortan las separaciones de la portada."
+      },
+      {
+        "name": "max-md",
+        "value": "< 768px",
+        "purpose": "Márgenes de 24 px, riel de 18 px, menú plegado, columnas apiladas, títulos más chicos."
+      },
+      {
+        "name": "max-sm",
+        "value": "< 640px",
+        "purpose": "Márgenes de 16 px y la escala de títulos y relleno más chica."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Acción principal",
+      "kind": "button",
+      "refersTo": "accion-principal",
+      "description": "La placa roja con flecha que lleva a pedir una demostración. Una por pantalla.",
+      "html": "<a class=\"ds-accion-principal\" href=\"#\">Pedir una demostración <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-accion-principal { display: inline-flex; align-items: center; gap: 14px; min-height: 56px; padding: 0 18px 0 22px; border-radius: 4px; background: #D92D20; color: #FFFFFF; font: 700 21px/1 \"Barlow Semi Condensed\", \"Arial Narrow\", system-ui, sans-serif; letter-spacing: 0.2px; text-decoration: none; cursor: pointer; } .ds-accion-principal:hover, .ds-accion-principal:active { background: #B42318; } .ds-accion-principal:focus-visible { outline: 3px solid #D92D20; outline-offset: 3px; }"
+    },
+    {
+      "name": "Acción secundaria",
+      "kind": "button",
+      "refersTo": "accion-secundaria",
+      "description": "Texto de señalética con flecha, sin placa. Al pasar el mouse aparece una raya debajo.",
+      "html": "<a class=\"ds-accion-secundaria\" href=\"#\">Conocer el sistema <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-accion-secundaria { display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 4px; border-bottom: 2px solid transparent; color: #18181B; font: 700 21px/1 \"Barlow Semi Condensed\", \"Arial Narrow\", system-ui, sans-serif; letter-spacing: 0.2px; text-decoration: none; cursor: pointer; } .ds-accion-secundaria:hover { border-bottom-color: #18181B; } .ds-accion-secundaria:focus-visible { outline: 3px solid #D92D20; outline-offset: 3px; }"
+    },
+    {
+      "name": "Campo del formulario",
+      "kind": "input",
+      "refersTo": "campo",
+      "description": "Etiqueta arriba, campo en placa clara; con error, borde rojo y mensaje debajo.",
+      "html": "<label class=\"ds-campo\"><span class=\"ds-campo-etiqueta\">Empresa</span><input class=\"ds-campo-input\" value=\"Unidad de Emergencias Médicas\" /></label> <label class=\"ds-campo\"><span class=\"ds-campo-etiqueta\">Teléfono o celular</span><input class=\"ds-campo-input ds-campo-error\" aria-invalid=\"true\" /><span class=\"ds-campo-mensaje\" role=\"alert\">Escriba un número de teléfono o celular.</span></label>",
+      "css": ".ds-campo { display: flex; flex-direction: column; gap: 8px; max-width: 320px; margin-bottom: 16px; font-family: \"Atkinson Hyperlegible Next\", system-ui, sans-serif; } .ds-campo-etiqueta { font: 600 16px/1.3 \"Atkinson Hyperlegible Next\", system-ui, sans-serif; color: #18181B; } .ds-campo-input { height: 52px; padding: 0 14px; border: 1px solid #D4D4D8; border-radius: 4px; background: #FFFFFF; color: #18181B; font: 400 17px/1 \"Atkinson Hyperlegible Next\", system-ui, sans-serif; } .ds-campo-input:focus-visible { outline: 3px solid #D92D20; outline-offset: 3px; } .ds-campo-error { border-color: #D92D20; } .ds-campo-mensaje { font: 400 15px/20px \"Atkinson Hyperlegible Next\", system-ui, sans-serif; color: #B42318; }"
+    },
+    {
+      "name": "Opción del formulario",
+      "kind": "chip",
+      "refersTo": "opcion",
+      "description": "Elegir por dónde se envía el pedido; la elegida es la placa oscura.",
+      "html": "<div class=\"ds-opciones\" role=\"radiogroup\"><span class=\"ds-opcion\" role=\"radio\" aria-checked=\"true\" tabindex=\"0\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 18.5 5.2 15A7.8 7.8 0 1 1 9 18.3Z\"/><path d=\"M9 10.5h6M9 13.5h4\"/></svg>WhatsApp</span><span class=\"ds-opcion\" role=\"radio\" aria-checked=\"false\" tabindex=\"0\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 18.5 5.2 15A7.8 7.8 0 1 1 9 18.3Z\"/><path d=\"M9 10.5h6M9 13.5h4\"/></svg>Correo</span></div>",
+      "css": ".ds-opciones { display: flex; gap: 10px; flex-wrap: wrap; } .ds-opcion { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 18px; border: 2px solid #D4D4D8; border-radius: 4px; background: #FFFFFF; color: #18181B; font: 700 20px/1 \"Barlow Semi Condensed\", \"Arial Narrow\", system-ui, sans-serif; cursor: pointer; } .ds-opcion[aria-checked=\"true\"] { background: #1A1A1D; border-color: #1A1A1D; color: #F4F4F5; } .ds-opcion:focus-visible { outline: 3px solid #D92D20; outline-offset: 3px; }"
+    },
+    {
+      "name": "Navegación del encabezado",
+      "kind": "nav",
+      "refersTo": "navegacion-activa",
+      "description": "Secciones como placas; la actual es la placa oscura de «usted está aquí».",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-item\" href=\"#\">Inicio</a><a class=\"ds-nav-item\" href=\"#\" aria-current=\"page\">Servicios</a><a class=\"ds-nav-item\" href=\"#\">Contacto</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 4px; padding: 12px; background: #EFEFEC; } .ds-nav-item { display: flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 4px; color: #18181B; font: 700 19px/1 \"Barlow Semi Condensed\", \"Arial Narrow\", system-ui, sans-serif; letter-spacing: 0.2px; text-decoration: none; } .ds-nav-item:hover { background: #FFFFFF; } .ds-nav-item[aria-current=\"page\"], .ds-nav-item[aria-current=\"page\"]:hover { background: #1A1A1D; color: #F4F4F5; } .ds-nav-item:focus-visible { outline: 3px solid #D92D20; outline-offset: 3px; }"
+    },
+    {
+      "name": "Placa con filas",
+      "kind": "card",
+      "refersTo": "placa",
+      "description": "Una placa clara con una fila por punto: pictograma en cuadro oscuro, rótulo y descripción.",
+      "html": "<ul class=\"ds-placa\"><li class=\"ds-placa-fila\"><span class=\"ds-placa-icono\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6.6 3.5h2.7l1.4 4-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4 1.4v2.7a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z\"/></svg></span><span class=\"ds-placa-rotulo\">Pedidos por teléfono y WhatsApp</span><span class=\"ds-placa-texto\">La central atiende llamadas y mensajes al mismo tiempo.</span></li><li class=\"ds-placa-fila\"><span class=\"ds-placa-icono\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6.6 3.5h2.7l1.4 4-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4 1.4v2.7a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z\"/></svg></span><span class=\"ds-placa-rotulo\">Sin ubicación exacta</span><span class=\"ds-placa-texto\">La dirección llega de palabra.</span></li></ul>",
+      "css": ".ds-placa { list-style: none; margin: 0; padding: 0; background: #FFFFFF; border: 1px solid #D9D9D4; border-radius: 6px; } .ds-placa-fila { display: flex; align-items: center; gap: 24px; padding: 24px 28px; } .ds-placa-fila + .ds-placa-fila { border-top: 1px solid #D9D9D4; } .ds-placa-icono { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; flex-shrink: 0; border-radius: 4px; background: #1A1A1D; color: #F4F4F5; } .ds-placa-rotulo { width: 240px; flex-shrink: 0; color: #18181B; font: 700 28px/30px \"Barlow Semi Condensed\", \"Arial Narrow\", system-ui, sans-serif; } .ds-placa-texto { flex: 1; color: #5E5E66; font: 400 17px/26px \"Atkinson Hyperlegible Next\", system-ui, sans-serif; }"
+    },
+    {
+      "name": "Placa oscura del directorio",
+      "kind": "card",
+      "refersTo": "placa-oscura",
+      "description": "Lo que manda en una sección: el directorio del sistema, el titular de la portada.",
+      "html": "<div class=\"ds-placa-oscura\"><div class=\"ds-directorio-fila\"><div><div class=\"ds-directorio-nombre\">Panel de la central</div><div class=\"ds-directorio-quien\">La central de la empresa</div></div><p class=\"ds-directorio-que\">Ve la flota y los incidentes en vivo y despacha una unidad.</p></div><div class=\"ds-directorio-fila\"><div><div class=\"ds-directorio-nombre\">App del paramédico</div><div class=\"ds-directorio-quien\">La tripulación</div></div><p class=\"ds-directorio-que\">Toma el incidente y marca cada paso de la atención.</p></div></div>",
+      "css": ".ds-placa-oscura { background: #1A1A1D; border-radius: 8px; overflow: hidden; } .ds-directorio-fila { display: flex; align-items: center; gap: 28px; padding: 26px 32px; } .ds-directorio-fila + .ds-directorio-fila { border-top: 1px solid #323238; } .ds-directorio-fila > div { width: 260px; flex-shrink: 0; } .ds-directorio-nombre { color: #F4F4F5; font: 700 26px/28px \"Barlow Semi Condensed\", \"Arial Narrow\", system-ui, sans-serif; } .ds-directorio-quien { color: #B4B4BB; font: 400 15px/21px \"Atkinson Hyperlegible Next\", system-ui, sans-serif; } .ds-directorio-que { flex: 1; margin: 0; color: #F4F4F5; font: 400 17px/26px \"Atkinson Hyperlegible Next\", system-ui, sans-serif; }"
+    },
+    {
+      "name": "Aviso de emergencia",
+      "kind": "custom",
+      "refersTo": "aviso-emergencia",
+      "description": "La franja roja arriba de todo: este sitio no recibe pedidos de ambulancia.",
+      "html": "<aside class=\"ds-aviso\" aria-label=\"Aviso de emergencia\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3.5 2.8 19.5h18.4Z\"/><path d=\"M12 9.5v4.5M12 17v.01\"/></svg><span><b>¿Es una emergencia?</b> Este sitio no recibe pedidos de ambulancia: pide ayuda desde la app del ciudadano o llama a la línea de emergencias.</span></aside>",
+      "css": ".ds-aviso { display: flex; align-items: center; gap: 12px; padding: 10px 40px; background: #D92D20; color: #FFFFFF; font: 400 15px/21px \"Atkinson Hyperlegible Next\", system-ui, sans-serif; } .ds-aviso b { font-weight: 700; }"
+    },
+    {
+      "name": "Tramo de la línea",
+      "kind": "custom",
+      "refersTo": "tramo",
+      "description": "El riel rojo de la izquierda con la parada a la altura del título de cada sección.",
+      "html": "<section class=\"ds-tramo\"><div class=\"ds-tramo-riel\"><span class=\"ds-tramo-linea\"></span><span class=\"ds-tramo-parada\"></span></div><div class=\"ds-tramo-contenido\"><h2 class=\"ds-tramo-titulo\">Un solo sistema, de la alerta al registro.</h2><p class=\"ds-tramo-entrada\">Cuatro partes conectadas a un servidor central.</p></div></section>",
+      "css": ".ds-tramo { display: flex; background: #EFEFEC; } .ds-tramo-riel { position: relative; width: 56px; flex-shrink: 0; display: flex; justify-content: center; } .ds-tramo-linea { width: 6px; height: 100%; background: #D92D20; } .ds-tramo-parada { position: absolute; top: 26px; width: 22px; height: 22px; box-sizing: border-box; border: 6px solid #D92D20; border-radius: 2px; background: #EFEFEC; } .ds-tramo-contenido { flex: 1; padding: 16px 0 64px 24px; } .ds-tramo-titulo { margin: 0 0 18px; color: #18181B; font: 700 56px/56px \"Barlow Semi Condensed\", \"Arial Narrow\", system-ui, sans-serif; letter-spacing: -0.6px; max-width: 900px; text-wrap: balance; } .ds-tramo-entrada { margin: 0; max-width: 680px; color: #18181B; font: 400 20px/31px \"Atkinson Hyperlegible Next\", system-ui, sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Seguir la línea roja",
+    "overview": "El sitio se recorre como la señalética de una sala de emergencias. La pared es neutra y casi blanca. Encima van placas esmaltadas: blancas con texto negro para la información y oscuras con texto blanco para lo que manda, como el ícono del logo. Una sola línea roja corre por la izquierda de cada página, como la cinta del piso de un hospital, y lleva sin dudar hasta la acción: pedir una demostración. Ese rojo es el único color que guía.\n\nLa letra de los títulos es de señalética: condensada, en negrita y grande, para leerse de lejos y de un vistazo. El texto corrido va en una letra de alta legibilidad, a 17 o 18 px, con renglones cortos (680 px como máximo). Los pictogramas son de trazo uniforme y las flechas indican adónde se va. Es un sitio para quien decide en una empresa de ambulancias: serio, claro y sin adornos. Nada de sombras, gradientes ni animaciones de adorno. El único movimiento es el del plano «Usted está aquí» al cargar la portada.",
+    "keyCharacteristics": [
+      "Pared neutra cálida (`pared`) con placas blancas (`placa`) y oscuras (`placaOscura`); la profundidad la dan el contraste de placa contra pared y un borde de 1 px, nunca una sombra.",
+      "Un solo rojo, `linea`: la cinta del piso, la acción principal, el aviso de emergencia, el foco con teclado y la alerta del plano.",
+      "Barlow Semi Condensed en negrita para todo lo que es señal (títulos, acciones, navegación, rótulos); Atkinson Hyperlegible Next para leer; Barlow con cifras tabulares para horas y fechas.",
+      "Esquinas casi rectas: de 2 a 8 px, como placas de chapa.",
+      "Modo claro y oscuro según el sistema. En oscuro la placa oscura se invierte y pasa a ser la placa clara que contrasta con la pared."
+    ],
+    "rules": [
+      {
+        "name": "The One Red Line Rule",
+        "body": "El rojo guía: va en la línea del piso, en la acción principal, en el aviso de emergencia y en la alerta del plano. Si un elemento rojo no lleva a ningún lado ni avisa de algo, va en otro color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Enamel Plate Rule",
+        "body": "Toda información va montada en una placa, clara u oscura, sobre la pared. La placa oscura es para lo que manda en esa sección (el titular, el directorio, lo elegido); la clara es para todo lo demás.",
+        "section": "colors"
+      },
+      {
+        "name": "The Signage Face Rule",
+        "body": "Lo que es señal (títulos, acciones, navegación, rótulos, opciones) va en Barlow Semi Condensed en negrita. Lo que se lee va en Atkinson Hyperlegible Next. No se mezclan dentro de un mismo bloque.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Clock Rule",
+        "body": "Las horas, los teléfonos y los números que se comparan llevan cifras tabulares, como un tablero.",
+        "section": "typography"
+      },
+      {
+        "name": "The Floor Tape Rule",
+        "body": "Toda página interna arranca con su placa de título y sigue en tramos sobre la misma línea roja, sin cortarla, hasta la última parada. No hay secciones sueltas fuera de la línea.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Enamel Rule",
+        "body": "Las placas están pegadas a la pared: se distinguen por su color y su borde, nunca por una sombra ni por un gradiente.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** llevar cada página por tramos sobre la línea roja, con su parada a la altura del título, y cortar la línea en el último tramo.",
+      "**Do** montar la información en placas: clara (`placa`) con borde de 1 px, u oscura (`placaOscura`) para lo que manda.",
+      "**Do** usar Barlow Semi Condensed en negrita para todo lo que es señal y Atkinson Hyperlegible Next para leer, con renglones de 680 px como máximo.",
+      "**Do** dar a la acción principal la placa roja con flecha, una sola por pantalla, y a las demás la acción secundaria sin placa.",
+      "**Do** usar los pictogramas de `shared/ui/iconos.tsx` (grilla de 24, trazo de 2) en vez de caracteres o emojis.",
+      "**Do** rotular como demostración o como dato de ejemplo todo lo que no sea real: el plano, las pantallas, las horas y los contactos provisorios.",
+      "**Do** probar cada página a 375, 768 y 1280 px, en claro y en oscuro."
+    ],
+    "donts": [
+      "**Don't** usar los comandos `bolder`, `delight`, `overdrive`, `animate` ni `colorize` de Impeccable: es un sistema para emergencias.",
+      "**Don't** usar el rojo de la línea para adornar, para enlaces de texto ni para títulos: solo guía, actúa o avisa.",
+      "**Don't** agregar sombras, gradientes ni esquinas de más de 8 px fuera de las pantallas de demostración.",
+      "**Don't** volver al gris del panel (#71717A) para el texto secundario del sitio: sobre la pared quedaba en 4,19:1. El del sitio (#5E5E66) llega a 5,58:1 sobre la pared y a 6,42:1 sobre la placa clara.",
+      "**Don't** aclarar el rojo en modo oscuro: con un rojo más claro (#E5372A) el texto blanco quedaba en 4,28:1. El sitio usa el mismo #D92D20 en los dos modos (4,83:1).",
+      "**Don't** animar nada más que el plano de la portada, ni animarlo cuando se pide movimiento reducido."
+    ]
+  }
+}

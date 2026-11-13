@@ -27,7 +27,7 @@ const RADIALES = [-90, -60, -30, 0, 30, 60, 90, 120, 150, 180, 210, 240]
 const ALERTA = polar(148, -58)
 const UNIDAD_DISPONIBLE = polar(206, -94)
 const QUIEBRE_RUTA = polar(148, -94)
-const UNIDAD_EN_ATENCION = polar(110, 148)
+const UNIDAD_EN_ATENCION = polar(110, 200)
 const UNIDAD_LEJANA = polar(206, 118)
 
 // Ruta: baja por la radial hasta el 3er anillo y sigue el anillo hasta la alerta.
@@ -81,15 +81,18 @@ export function PlanoUstedEstaAqui() {
         ))}
       </g>
 
-      {/* Nombres de los anillos, sobre el eje de abajo a la izquierda. */}
-      <g fontFamily={SENAL} fontSize="16" fontWeight="600" fill="var(--textoSecundario)">
-        {/* El 1er anillo queda sin nombre: al centro no hay lugar y los de afuera ya ubican la escala. */}
+      {/* Nombres de los anillos en placas, como los letreros de calle, sobre la diagonal de abajo a la izquierda.
+          El 1er anillo queda sin nombre: al centro no hay lugar y los de afuera ya ubican la escala. */}
+      <g fontFamily={SENAL} fontSize="16" fontWeight="700">
         {ANILLOS.filter(({ radio }) => radio > 46).map(({ radio, nombre }) => {
-          const punto = polar(radio, 196)
+          const punto = polar(radio, 135)
           return (
-            <text key={nombre} x={punto.x + 6} y={punto.y - 6}>
-              {nombre}
-            </text>
+            <g key={nombre}>
+              <rect x={punto.x - 42} y={punto.y - 13} width="84" height="26" rx="3" fill="var(--placa)" stroke="var(--planoTrazo)" />
+              <text x={punto.x} y={punto.y + 5.5} textAnchor="middle" fill="var(--texto)">
+                {nombre}
+              </text>
+            </g>
           )
         })}
       </g>

@@ -1,0 +1,11 @@
+# pnpm solo deja accesibles los paquetes que este proyecto declara. El compilador de Tamagui genera
+# .tamagui/tamagui.config.mjs importando paquetes suyos por nombre (@tamagui/core, @tamagui/web y otros), que
+# llegan como dependencias indirectas: sin esto no los encuentra y los estilos se resuelven en el navegador.
+publicHoistPattern:
+  - '@tamagui/*'
+  # Los de fabrica de pnpm, que esta lista reemplaza: sin repetirlos, eslint deja de encontrar sus plugins.
+  - '*eslint*'
+  - '*prettier*'
+
+allowBuilds:
+  esbuild: true

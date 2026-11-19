@@ -1,0 +1,56 @@
+# Integración y publicación del sitio corporativo en Firebase Hosting.
+# En cada PR: revisa el código (ESLint) y compila (TypeScript + Vite); si algo falla, el PR queda en rojo.
+# En cada cambio que entra a develop: hace lo mismo y, si pasa, publica el sitio.
+# El correo y el WhatsApp de contacto salen de las variables del repositorio (Settings > Variables), no del código.
+name: Sitio
+
+on:
+  pull_request:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+concurrency:
+  group: sitio-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Revisar el código
+        run: pnpm run lint
+      - name: Compilar
+        run: pnpm run build
+        env:
+          VITE_CONTACTO_CORREO: ${{ vars.VITE_CONTACTO_CORREO }}
+          VITE_CONTACTO_WHATSAPP: ${{ vars.VITE_CONTACTO_WHATSAPP }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sitio
+          path: dist
+
+  publicar:
+    needs: compilar
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: sitio
+          path: dist
+      - name: Publicar en Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AUXILIA_SITIO_WEB }}
+          projectId: auxilia-sitio-web
+          channelId: live

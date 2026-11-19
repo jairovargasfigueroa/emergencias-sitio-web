@@ -1,0 +1,65 @@
+# Integración y publicación del sitio corporativo en Firebase Hosting.
+# En cada PR: revisa el código (ESLint) y compila (TypeScript + Vite); si algo falla, el PR queda en rojo.
+# En cada cambio que entra a develop: hace lo mismo y, si pasa, publica el sitio.
+# El correo y el WhatsApp de contacto salen de las variables del repositorio (Settings > Variables), no del código.
+# No usa secretos: la publicación entra a Google Cloud con OIDC (ver el trabajo publicar).
+name: Sitio
+
+on:
+  pull_request:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+concurrency:
+  group: sitio-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Revisar el código
+        run: pnpm run lint
+      - name: Compilar
+        run: pnpm run build
+        env:
+          VITE_CONTACTO_CORREO: ${{ vars.VITE_CONTACTO_CORREO }}
+          VITE_CONTACTO_WHATSAPP: ${{ vars.VITE_CONTACTO_WHATSAPP }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sitio
+          path: dist
+
+  # Sin claves: GitHub entra a Google Cloud con OIDC (Workload Identity Federation). El proveedor solo acepta
+  # este repositorio y la rama develop, y la cuenta de servicio solo puede administrar Firebase Hosting.
+  publicar:
+    needs: compilar
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: sitio
+          path: dist
+      - name: Entrar a Google Cloud con OIDC
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/720462236248/locations/global/workloadIdentityPools/github/providers/github
+          service_account: sitio-publicacion@auxilia-sitio-web.iam.gserviceaccount.com
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Publicar en Firebase Hosting
+        run: npx -y firebase-tools@14 deploy --only hosting --project auxilia-sitio-web --non-interactive
